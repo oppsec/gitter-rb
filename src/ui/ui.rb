@@ -1,16 +1,14 @@
 require 'colorize'
 
+
+# Get the content from banner.txt file
 def get_banner()
-  
-  file = File.open("src/ui/banner.txt", "r")
-  file_content = file.read
-
+  file_content = File.open("src/ui/banner.txt").read
   print(file_content.red)
-
-  file.close()
 end
 
 
+# Clear the screen
 def clear()
-  system("clear") || system("cls")
+  system("clear || cls")
 end
